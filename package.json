@@ -1,7 +1,7 @@
 {
   "name": "nest-react",
   "version": "1.0.0",
-  "author": "Wei Zhang",
+  "author": "Ike",
   "description": "Simple boilerplate for a Nest + React project",
   "homepage": "https://github.com/LandazuriPaul/nest-react#readme",
   "repository": {
@@ -35,5 +35,11 @@
     "build-push:server": "PACKAGE=server ./scripts/build_and_push.sh",
     "build-push:client": "PACKAGE=client ./scripts/build_and_push.sh",
     "lint": "pnpm -r run lint"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^8.10.2"
   }
 }

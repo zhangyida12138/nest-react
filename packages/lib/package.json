@@ -2,7 +2,7 @@
   "name": "@nest-react/lib",
   "version": "1.0.0",
   "description": "Library of the nest-react boilerplate",
-  "author": "Wei Zhang",
+  "author": "Ike",
   "license": "LGPL-3.0-or-later",
   "main": "dist/index.js",
   "scripts": {
