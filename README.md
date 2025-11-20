@@ -20,7 +20,7 @@ While being minimalistic, this boilerplate offers a number of features which can
 
 ### Global
 
-- Makes use of the [yarn workspaces](https://classic.yarnpkg.com/en/docs/workspaces/) to centralise the package management system for all the internal packages.
+- Makes use of [pnpm workspaces](https://pnpm.io/workspaces) to centralise the package management system for all the internal packages.
 
 - TypeScript ^4.7.4 which comes with, for example, **optional chaining** and customised [import paths](#typescript-import-paths) already defined for each package.
 
@@ -30,7 +30,7 @@ While being minimalistic, this boilerplate offers a number of features which can
 
 - Consistent coding style following the standards. See [CONTRIBUTING](./CONTRIBUTING.md#coding-styles).
 
-- Development scripts: `yarn start:dev` can be run in any package. See [Development & builds](#development--builds) for more information.
+- Development scripts: `pnpm start:dev` can be run in any package. See [Development & builds](#development--builds) for more information.
 
 - Visual Studio Code [debug settings](.vscode/launch.json).
 
@@ -112,39 +112,39 @@ Once you're done with the previous steps, you can properly install the project d
      ```sh
      nvm install 16.16.0
      ```
-   - [Yarn](https://classic.yarnpkg.com/): If you have `nvm` installed, you'd prefer to install `yarn` without the node dependency. To do so, the `bash` install is the easiest:
+   - [pnpm](https://pnpm.io/): If you have `nvm` installed, you can install pnpm globally:
      ```sh
-     curl -o- -L https://yarnpkg.com/install.sh | bash
+     npm install -g pnpm
      ```
 
-   > As the boilerplate makes use of the yarn workspaces, you shouldn't use `npm`.
+   > As the boilerplate makes use of pnpm workspaces, you shouldn't use `npm` or `yarn`.
 
 2. Install dependencies with the classic:
 
    ```sh
-   yarn install
+   pnpm install
    ```
 
-   > This will install all package dependencies in a common `node_modules` folder at the root of the project using a single `yarn.lock` file to avoid conflicting dependencies. The internal dependencies will be replaced by symbolic links to the corresponding packages.
+   > This will install all package dependencies in a common `node_modules` folder at the root of the project using a single `pnpm-lock.yaml` file to avoid conflicting dependencies. The internal dependencies will be replaced by symbolic links to the corresponding packages.
 
 3. Finally, in order to have the "common" packages (`lib` and `domain`) built so they can be used by both the `server` and the `client`, run:
 
    ```sh
-   yarn build:common
+   pnpm build:common
    ```
 
    Or if you want the common packages to be **watched for file changes**, you can run:
 
    ```sh
-   yarn start:common
+   pnpm start:common
    ```
 
 #### Note about subsequent installations
 
 When you want to add new dependencies to any of the packages, you can either:
 
-- Run `yarn add <new-package1> <new-package2>` in the corresponding package folder.
-- Or run `yarn workspace <YOUR_PACKAGE_NAME> add <new-package1> <new-package2>` from the root folder.
+- Run `pnpm add <new-package1> <new-package2>` in the corresponding package folder.
+- Or run `pnpm --filter <YOUR_PACKAGE_NAME> add <new-package1> <new-package2>` from the root folder.
 
 ### Development & Builds
 
@@ -179,10 +179,10 @@ To see how to integrates these tools with your favourite IDE or text editor, you
 Each package has its own
 
 ```sh
-yarn lint
+pnpm lint
 ```
 
-command to ensure that its source code is written according to the ESLint rules. The project itself also has a root `yarn lint` command to sequentially run it in each internal package.
+command to ensure that its source code is written according to the ESLint rules. The project itself also has a root `pnpm lint` command to sequentially run it in each internal package.
 
 ## TypeScript import paths
 
@@ -208,14 +208,14 @@ This allows you to `import` any file from the **same package** with the `'~/path
 
 This project comes with a `Dockerfile` for each package likely to be deployed. They are all based on the [alpine](https://alpinelinux.org/) project.
 
-To build the corresponding Docker images, you can use the [build_and_push.sh](./scripts/build_and_push.sh) script by setting the `PACKAGE` and optionally the `VERSION` — defaults to `latest` — as environment variables or simply use the dedicated `yarn` commands (the `latest` version will be applied):
+To build the corresponding Docker images, you can use the [build_and_push.sh](./scripts/build_and_push.sh) script by setting the `PACKAGE` and optionally the `VERSION` — defaults to `latest` — as environment variables or simply use the dedicated `pnpm` commands (the `latest` version will be applied):
 
 ```sh
 # To build and push the server
-yarn build-push:server
+pnpm build-push:server
 
 # To build and push the client
-yarn build-push:client
+pnpm build-push:client
 ```
 
 ## Deployment

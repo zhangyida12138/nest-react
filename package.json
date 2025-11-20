@@ -15,9 +15,7 @@
     "doc": "docs"
   },
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
+  "packageManager": "pnpm@10.22.0",
   "references": [
     {
       "path": "packages/domain"
@@ -28,14 +26,14 @@
   ],
   "scripts": {
     "generate:version": "./scripts/generate_version.sh",
-    "start:domain": "yarn workspace @nest-react/domain start:dev",
-    "start:lib": "yarn workspace @nest-react/lib start:dev",
-    "start:common": "(yarn start:domain & yarn start:lib)",
-    "build:domain": "yarn workspace @nest-react/domain build",
-    "build:lib": "yarn workspace @nest-react/lib build",
-    "build:common": "yarn build:domain && yarn build:lib",
+    "start:domain": "pnpm --filter @nest-react/domain start:dev",
+    "start:lib": "pnpm --filter @nest-react/lib start:dev",
+    "start:common": "(pnpm start:domain & pnpm start:lib)",
+    "build:domain": "pnpm --filter @nest-react/domain build",
+    "build:lib": "pnpm --filter @nest-react/lib build",
+    "build:common": "pnpm build:domain && pnpm build:lib",
     "build-push:server": "PACKAGE=server ./scripts/build_and_push.sh",
     "build-push:client": "PACKAGE=client ./scripts/build_and_push.sh",
-    "lint": "yarn workspaces run lint"
+    "lint": "pnpm -r run lint"
   }
 }
