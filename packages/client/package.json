@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Client boilerplate built with Vite, using React, communicating with a Nest server",
   "main": "src/index.tsx",
-  "author": "Paul Landázuri",
+  "author": "Wei Zhang",
   "license": "LGPL-3.0-or-later",
   "scripts": {
     "start:dev": "vite",

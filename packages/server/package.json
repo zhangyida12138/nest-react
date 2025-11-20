@@ -2,7 +2,7 @@
   "name": "@nest-react/server",
   "version": "1.0.0",
   "description": "Backend of the Nest + React boilerplate",
-  "author": "Paul Landázuri",
+  "author": "Wei Zhang",
   "license": "LGPL-3.0-or-later",
   "main": "src/main.ts",
   "scripts": {

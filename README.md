@@ -52,24 +52,22 @@ While being minimalistic, this boilerplate offers a number of features which can
 
 - Production ready [Dockerfile](#docker-images).
 
-
 ### Client/Server versions
-
 
 While being minimalistic, this boilerplate provides straight-forward access to the client's or version's deployed version:
 
 1. To check the server's version, simply call the [`/version`](http://localhost:4000/version) endpoint which returns a JSON looking like this:
 
-    ```json
-    {
-      "GIT_SHORT_HASH": "568cfad",
-      "GIT_BRANCH": "master",
-      "REPO_VERSION": "1.0.0",
-      "DOMAIN_VERSION": "1.0.0",
-      "LIB_VERSION": "1.0.0",
-      "SERVER_VERSION": "1.0.0"
-    }
-    ```
+   ```json
+   {
+     "GIT_SHORT_HASH": "568cfad",
+     "GIT_BRANCH": "master",
+     "REPO_VERSION": "1.0.0",
+     "DOMAIN_VERSION": "1.0.0",
+     "LIB_VERSION": "1.0.0",
+     "SERVER_VERSION": "1.0.0"
+   }
+   ```
 
 2. To identify the client's deployed version, you can see the page's source code and look for the JS bundle name, which should look like: `index.39a2462@master.c177f4e7.js`. This corresponds to the pattern passed in the [`vite.config.ts`](./packages/client/vite.config.ts) file: `[name].${getBuildId()}.[hash].js`. Currently, the `buildId` is defined as `shortHash@branch` but you can adapt the `getBuildId` function to your needs.
 
@@ -234,4 +232,4 @@ This project is licensed under the [GNU Lesser General Public License v3.0 or la
 
 ## Author
 
-Paul Landázuri
+Wei Zhang
