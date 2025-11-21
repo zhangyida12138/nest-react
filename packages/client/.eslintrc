@@ -54,6 +54,10 @@
           {
             "selector": "enumMember",
             "format": ["PascalCase"]
+          },
+          {
+            "selector": "objectLiteralProperty",
+            "format": null
           }
         ],
         "react/prop-types": "off"

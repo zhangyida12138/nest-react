@@ -2,7 +2,7 @@
   "name": "nest-react",
   "version": "1.0.0",
   "author": "Ike",
-  "description": "Simple boilerplate for a Nest + React project",
+  "description": "A modern Tech Blog built with NestJS and React",
   "homepage": "https://github.com/LandazuriPaul/nest-react#readme",
   "repository": {
     "type": "git",
@@ -25,20 +25,21 @@
     }
   ],
   "scripts": {
-    "generate:version": "./scripts/generate_version.sh",
+    "generate:version": "node scripts/generate_version.js",
     "start:domain": "pnpm --filter @nest-react/domain start:dev",
     "start:lib": "pnpm --filter @nest-react/lib start:dev",
     "start:common": "(pnpm start:domain & pnpm start:lib)",
     "build:domain": "pnpm --filter @nest-react/domain build",
     "build:lib": "pnpm --filter @nest-react/lib build",
     "build:common": "pnpm build:domain && pnpm build:lib",
-    "build-push:server": "PACKAGE=server ./scripts/build_and_push.sh",
-    "build-push:client": "PACKAGE=client ./scripts/build_and_push.sh",
+    "build-push:server": "cross-env PACKAGE=server node scripts/build_and_push.js",
+    "build-push:client": "cross-env PACKAGE=client node scripts/build_and_push.js",
     "lint": "pnpm -r run lint"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
+    "cross-env": "^7.0.3",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^8.10.2"
   }

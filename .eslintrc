@@ -28,7 +28,7 @@
     "dot-notation": "error",
     "eqeqeq": ["error", "smart"],
     "guard-for-in": "error",
-    "max-len": [1, { "code": 180, "ignoreUrls": true }],
+    "max-len": "off",
     "no-bitwise": "error",
     "no-cond-assign": "error",
     "no-console": [
@@ -81,7 +81,7 @@
     "no-var": "error",
     "no-void": "error",
     "prefer-const": "error",
-    "prettier/prettier": ["warn"],
+    "prettier/prettier": "off",
     "radix": "error",
     "sort-imports": ["warn", { "ignoreDeclarationSort": true }],
     "spaced-comment": "error",
@@ -127,6 +127,10 @@
       {
         "selector": "enumMember",
         "format": ["PascalCase"]
+      },
+      {
+        "selector": "objectLiteralProperty",
+        "format": null
       }
     ],
     "@typescript-eslint/no-empty-function": "warn",

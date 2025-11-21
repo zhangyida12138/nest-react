@@ -1,8 +1,8 @@
 import React, { Suspense } from 'react'
 import { createRoot } from 'react-dom/client'
 
-import { APP_ROOT } from '~/config'
 import { App } from '~/components/App'
+import { APP_ROOT } from '~/config'
 
 import './index.css'
 

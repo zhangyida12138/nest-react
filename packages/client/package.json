@@ -1,7 +1,7 @@
 {
   "name": "@nest-react/client-vite",
   "version": "1.0.0",
-  "description": "Client boilerplate built with Vite, using React, communicating with a Nest server",
+  "description": "Client for Tech Blog built with Vite and React",
   "main": "src/index.tsx",
   "author": "Ike",
   "license": "LGPL-3.0-or-later",
@@ -14,6 +14,9 @@
     "check-types": "tsc"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/material": "^7.3.5",
     "@nest-react/domain": "workspace:*",
     "@nest-react/lib": "workspace:*",
     "debug": "^4.3.4",
@@ -37,6 +40,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^2.7.1",
     "typescript": "^4.7.4",
+    "unplugin-auto-import": "^20.2.0",
     "vite": "^5.4.21"
   }
 }

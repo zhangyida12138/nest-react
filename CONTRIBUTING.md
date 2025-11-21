@@ -1,8 +1,8 @@
-# Contributing to this Nest - React boilerplate
+# Contributing to this Nest - React project
 
 ## Coding styles
 
-As the TypeScript project doesn't issue an "official style guide", this boilerplate mostly follows the [Standard JavaScript rules](https://standardjs.com/rules.html) for generic JavaScript declaration, and the [TypeScript book StyleGuide and Coding Conventions](https://basarat.gitbook.io/typescript/styleguide) for TypeScript specific syntax.
+As the TypeScript project doesn't issue an "official style guide", this project mostly follows the [Standard JavaScript rules](https://standardjs.com/rules.html) for generic JavaScript declaration, and the [TypeScript book StyleGuide and Coding Conventions](https://basarat.gitbook.io/typescript/styleguide) for TypeScript specific syntax.
 
 As a quick summary, here are the main naming conventions:
 
@@ -61,7 +61,7 @@ Prettier easily integrates [many text editors and IDEs](https://prettier.io/), f
 
 - JetBrains IDEs: built-in support
 
-This boilerplate has a `.vscode` folder with the following setting to help us have a smooth experience with formatting:
+This project has a `.vscode` folder with the following setting to help us have a smooth experience with formatting:
 
 ```json
 {
@@ -81,11 +81,11 @@ VS Code and WebStorm both fully support TypeScript natively. For [Vim / NeoVim](
 
 ---
 
-# 为 Nest - React 模板贡献代码
+# 为 Nest - React 项目贡献代码
 
 ## 编码风格
 
-由于 TypeScript 项目没有发布"官方风格指南"，本模板主要遵循 [Standard JavaScript 规则](https://standardjs.com/rules.html) 用于通用 JavaScript 声明，以及 [TypeScript 书籍风格指南和编码约定](https://basarat.gitbook.io/typescript/styleguide) 用于 TypeScript 特定语法。
+由于 TypeScript 项目没有发布"官方风格指南"，本项目主要遵循 [Standard JavaScript 规则](https://standardjs.com/rules.html) 用于通用 JavaScript 声明，以及 [TypeScript 书籍风格指南和编码约定](https://basarat.gitbook.io/typescript/styleguide) 用于 TypeScript 特定语法。
 
 快速总结，以下是主要的命名约定：
 
@@ -144,7 +144,7 @@ Prettier 可以轻松集成到[许多文本编辑器和 IDE](https://prettier.io
 
 - JetBrains IDEs: 内置支持
 
-本模板有一个 `.vscode` 文件夹，包含以下设置，以帮助我们获得流畅的格式化体验：
+本项目有一个 `.vscode` 文件夹，包含以下设置，以帮助我们获得流畅的格式化体验：
 
 ```json
 {
