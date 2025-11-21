@@ -1,4 +1,3 @@
-import React, { FC, ReactNode } from 'react'
 import {
   AppBar,
   Box,
@@ -7,6 +6,7 @@ import {
   Toolbar,
   Typography,
 } from '@mui/material'
+import React, { FC, ReactNode } from 'react'
 
 interface LayoutProps {
   children: ReactNode
@@ -49,7 +49,7 @@ export const Layout: FC<LayoutProps> = ({ children }) => {
             ABOUT
           </Link>
           <Link
-            href="#"
+            href="https://github.com/zhangyida12138"
             color="inherit"
             underline="none"
             sx={{ mx: 2, '&:hover': { color: 'primary.main' } }}>
